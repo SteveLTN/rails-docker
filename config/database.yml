@@ -1,0 +1,15 @@
+databacommon: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *common
+  database: rails_docker
+
+test: &test
+  <<: *common
+  database: rails_docker
+
+cucumber:
+  <<: *test
